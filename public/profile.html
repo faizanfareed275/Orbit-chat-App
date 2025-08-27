@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Orbit Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-comment-dots"></i> Orbit Chat</h2>
+      </div>
+      
+      <ul>
+        <li><a href="chat.html"><i class="fas fa-comment"></i> Chat</a></li>
+        <li><a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+        <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="profile-content">
+      <div class="profile-header">
+        <div>
+          <h2>Profile Settings</h2>
+          <p>Manage your account information and security</p>
+        </div>
+      </div>
+      
+      <div class="profile-card">
+        <div class="profile-info">
+          <div class="profile-avatar">F</div>
+          <div class="profile-details">
+            <h3>Faizan</h3>
+            <p>Active now</p>
+          </div>
+        </div>
+        
+        <form id="profileForm" class="settings-form">
+          <div class="input-group">
+            <label>Username</label>
+            <input type="text" name="username" value="Faizan" readonly>
+          </div>
+          
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" value="faizan@example.com">
+          </div>
+          
+          <div class="input-group">
+            <label>Change Password</label>
+            <input type="password" name="password" placeholder="New password">
+          </div>
+          
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" placeholder="Confirm new password">
+          </div>
+          
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-save"></i> Update Profile
+          </button>
+        </form>
+        
+        <div class="security-notice">
+          <i class="fas fa-shield-alt"></i>
+          <p>Your personal information is encrypted and secure. We'll never share your details with third parties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+:root {
+  --Orbit-primary: #128C7E;
+  --Orbit-primary-dark: #075E54;
+  --wa-green: #128C7E;
+  --wa-teal: #25D366;
+  --wa-light: #ECE5DD;
+  --wa-dark: #075E54;
+  --wa-blue: #34B7F1;
+  --wa-gray: #3C3C3C;
+  --wa-chat-background: #E5DDD5;
+  --wa-incoming: #FFFFFF;
+  --wa-outgoing: #DCF8C6;
+  --text-dark: #3B4A54;
+  --text-light: #ffffff;
+}
+body {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Auth pages */
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background: linear-gradient(135deg, var(--Orbit-primary) 0%, var(--Orbit-primary-dark) 100%);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--Orbit-primary);
+  color: var(--text-light);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.switch-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.switch-text a {
+  color: var(--Orbit-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Profile Page */
+.profile-container {
+  display: flex;
+  height: 100vh;
+}
+
+.profile-container .sidebar {
+  width: 250px;
+  background: #1f1f2e;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.profile-container .sidebar h2 {
+  margin-bottom: 1.5rem;
+}
+
+.profile-container .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-container .sidebar ul li {
+  margin: 1rem 0;
+}
+
+.profile-container .sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.profile-container .sidebar ul li a.active {
+  font-weight: bold;
+  color: #6a11cb;
+}
+
+.profile-content {
+  flex: 1;
+  padding: 2rem;
+  background: #f4f6fb;
+}
+
+.settings-form .input-group {
+  margin-bottom: 1rem;
+}
