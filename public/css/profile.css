@@ -19,35 +19,38 @@
     }
     
     body {
-      background: linear-gradient(135deg, var(--whatsapp-primary) 0%, var(--whatsapp-primary-dark) 100%);
-      color: var(--text-dark);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    
-    .profile-container {
-      display: flex;
-      width: 100%;
-      max-width: 1000px;
-      height: 600px;
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    
-    /* Sidebar Styling */
-    .sidebar {
-      width: 240px;
-      background-color: var(--sidebar-bg);
-      color: white;
-      padding: 25px 0;
-      display: flex;
-      flex-direction: column;
-    }
+  background: var(--whatsapp-chat-bg); /* keep background light like WhatsApp */
+  color: var(--text-dark);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  overflow: hidden; /* prevent scrollbars */
+}
+
+/* Main container should fill the whole screen */
+.profile-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  border-radius: 0; /* remove rounded corners since it's full screen */
+  overflow: hidden;
+  box-shadow: none; /* no shadow needed */
+}
+
+/* Sidebar default (desktop) */
+.sidebar {
+  width: 300px;
+  background-color: var(--sidebar-bg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
     
     .sidebar-header {
       padding: 0 25px 25px;
@@ -104,14 +107,14 @@
       text-align: center;
     }
     
-    /* Profile Content Styling */
-    .profile-content {
-      flex: 1;
-      padding: 30px;
-      overflow-y: auto;
-      background-color: var(--whatsapp-chat-bg);
-    }
-    
+/* Profile content */
+.profile-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: var(--whatsapp-chat-bg);
+  height: 100%;
+}
     .profile-header {
       display: flex;
       align-items: center;
@@ -276,7 +279,6 @@
       }
       
       .sidebar ul {
-        display: flex;
         overflow-x: auto;
         margin-top: 15px;
         padding-bottom: 10px;
@@ -302,3 +304,39 @@
         margin-bottom: 15px;
       }
     }
+
+    
+/* Hide sidebar on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .profile-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Add a hamburger button */
+  .menu-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+}

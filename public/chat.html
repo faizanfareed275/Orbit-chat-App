@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="sidebar-icons">
-          <i class="fas fa-comment-alt"></i>
+          <a href="requests.html"><i class="fas fa-comment-alt"></i></a>
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <i class="fas fa-phone"></i>
           <i class="fas fa-video"></i>
           <i class="fas fa-search"></i>
-          <i class="fas fa-paperclip"></i>
+          <!-- <i class="fas fa-paperclip"></i> -->
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
@@ -130,15 +130,28 @@
         <div class="day-divider"><span>TODAY</span></div>
       </div>
 
-      <!-- Input -->
-      <div class="input-area">
-        <button class="input-btn" id="emoji-btn"><i class="far fa-smile"></i></button>
-        <button class="input-btn"><i class="fas fa-paperclip"></i></button>
-        <input type="text" class="message-input" placeholder="Type a message" id="message-input">
-        <button class="input-btn"><i class="fas fa-microphone"></i></button>
-        <button class="send-btn" id="send-btn"><i class="fas fa-paper-plane"></i></button>
-      </div>
+     <!-- Input -->
+<div class="input-area">
+  <button class="input-btn" id="emoji-btn"><i class="far fa-smile"></i></button>
+  
+  <!-- Paperclip + Menu -->
+  <div class="attach-wrapper">
+    <button class="input-btn" id="attach-btn"><i class="fas fa-paperclip"></i></button>
+    <div class="attach-menu" id="attach-menu">
+      <label><i class="fas fa-file"></i> Document</label>
+      <label><i class="fas fa-camera"></i> Camera</label>
+      <label><i class="fas fa-image"></i> Gallery</label>
+      <label><i class="fas fa-music"></i> Audio</label>
+      <label><i class="fas fa-user"></i> Contact</label>
+      <label><i class="fas fa-map-marker-alt"></i> Location</label>
     </div>
+  </div>
+
+  <input type="text" class="message-input" placeholder="Type a message" id="message-input">
+  <button class="input-btn"><i class="fas fa-microphone"></i></button>
+  <button class="send-btn" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+</div>
+
 
     <!-- Emoji Picker -->
     <div class="emoji-picker" id="emoji-picker">
@@ -154,17 +167,7 @@
   <script src="js/chat.js"></script>
 
   <script>
-    const profileToggle = document.getElementById("profile-toggle");
-    const profileSidebar = document.getElementById("profile-sidebar");
-    const overlay = document.getElementById("overlay");
-
-    function toggleProfile() {
-      profileSidebar.classList.toggle("show");
-      overlay.classList.toggle("active");
-    }
-
-    profileToggle.addEventListener("click", toggleProfile);
-    overlay.addEventListener("click", toggleProfile);
+    
   </script>
 </body>
 </html>

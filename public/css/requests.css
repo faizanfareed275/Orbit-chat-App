@@ -1,0 +1,72 @@
+
+
+/* Requests */
+.requests-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.requests-container header {
+  margin-bottom: 20px;
+}
+
+.request-card {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.request-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.request-info {
+  flex: 1;
+}
+
+.request-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.request-info p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.request-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.accept {
+  background: #25d366;
+  color: #fff;
+}
+
+.reject {
+  background: #ff9800;
+  color: #fff;
+}
+
+.block {
+  background: #e53935;
+  color: #fff;
+}

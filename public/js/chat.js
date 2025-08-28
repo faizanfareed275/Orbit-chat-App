@@ -1,3 +1,16 @@
+const profileToggle = document.getElementById("profile-toggle");
+    const profileSidebar = document.getElementById("profile-sidebar");
+    const overlay = document.getElementById("overlay");
+
+    function toggleProfile() {
+      profileSidebar.classList.toggle("show");
+      overlay.classList.toggle("active");
+    }
+
+    profileToggle.addEventListener("click", toggleProfile);
+    overlay.addEventListener("click", toggleProfile);
+
+
 // chat.js: handles messages demo & send functionality
 document.addEventListener('DOMContentLoaded', function() {
   const messagesContainer = document.getElementById('messages-container');
@@ -99,4 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // initialize
   loadSampleMessages();
+});
+
+const attachBtn = document.getElementById("attach-btn");
+const attachMenu = document.getElementById("attach-menu");
+
+attachBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  attachMenu.style.display = attachMenu.style.display === "flex" ? "none" : "flex";
+});
+
+// Close if clicked outside
+document.addEventListener("click", () => {
+  attachMenu.style.display = "none";
 });
