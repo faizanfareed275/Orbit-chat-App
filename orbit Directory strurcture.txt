@@ -1,0 +1,42 @@
+# Create project root
+mkdir realtime-chat-app && cd realtime-chat-app
+
+# Root files
+touch .env .gitignore README.md package.json server.js
+
+# Config
+mkdir config && touch config/db.js config/index.js
+
+# Src structure
+mkdir -p src/{controllers,models,routes,sockets/handlers,middlewares,utils,services}
+
+touch src/controllers/{authController.js,messageController.js,roomController.js}
+touch src/models/{User.js,Message.js,Room.js}
+touch src/routes/{auth.js,messages.js,rooms.js,users.js}
+touch src/sockets/index.js src/sockets/handlers/{connectionHandler.js,roomHandler.js,directMessageHandler.js,presenceHandler.js}
+touch src/middlewares/{authMiddleware.js,uploadMiddleware.js,rateLimiter.js}
+touch src/utils/{notifications.js,sanitizer.js,emojiUtils.js}
+touch src/services/{fileService.js,soundService.js}
+
+# Public frontend
+mkdir -p public/{css,js,assets/sounds,uploads}
+touch public/index.html public/chat.html
+touch public/css/{styles.css,tailwind.css}
+touch public/js/{auth.js,chat.js,ui.js,fileUpload.js,emojiPicker.js,notifications.js}
+touch public/assets/logo.svg public/assets/placeholder-avatar.png public/assets/sounds/new_message.mp3
+
+# Views (optional)
+mkdir -p views/emailTemplates
+
+# Uploads (server-side)
+mkdir uploads
+
+# Scripts
+mkdir scripts && touch scripts/{seed.js,migrate.js}
+
+# Docs
+mkdir docs && touch docs/{API.md,DESIGN.md}
+
+# Tests
+mkdir -p tests/{unit,integration}
+touch tests/unit/auth.test.js tests/integration/sockets.test.js

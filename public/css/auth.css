@@ -1,3 +1,4 @@
+
 .auth-container {
   max-width: 450px;
   margin: 60px auto;
@@ -28,6 +29,11 @@
   padding: 12px;
   border-radius: 20px;
   width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit; 
+    color: white;
 }
 .btn-wa:hover { background-color: var(--wa-dark); }
 .auth-footer { text-align: center; padding: 15px; font-size: 14px; }
